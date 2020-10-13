@@ -6,7 +6,7 @@ class Movies extends Component {
     movies: getMovies()
   }
 
-  handleDelete = movie => {
+  handleRemote = movie => {
     const movies = this.state.movies.filter(m => m._id !== movie._id);
     this.setState({ movies })
     
@@ -36,7 +36,7 @@ class Movies extends Component {
               <td>{movie.genre.name}</td>
               <td>{movie.numberInStock}</td>
               <td>{movie.dailyRentalRate}</td>
-              <td><button onClick={() => this.handleDelete(movie)} className="btn btn-danger btn-sm">Remove</button></td>
+              <td><button onClick={() => this.handleRemote(movie)} className="btn btn-danger btn-sm">Remove</button></td>
               </tr>)}
           </tbody>
         </table>
